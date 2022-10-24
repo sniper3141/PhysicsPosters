@@ -169,7 +169,8 @@
         function openModal(imageId){
             const photoSrcArray = [
             ["Unit 1 Photos/Physics Motion Poster6.0.jpg", "Unit 1 Photos/Physics Tension and other things Poster2.0.jpg", "Unit 1 Photos/Explosions & Impulse.jpg", "Unit 1 Photos/Momentum Poster.jpg", "Unit 1 Photos/Projectiles & Gravity.jpg", "Unit 1 Photos/Special Relativity Poster 2.jpg", "Unit 1 Photos/Physics_poster_space.png", "Unit 1 Photos/The-Big-Bang-Theory.png"],
-            ["Unit 2 Photos/Charges-in-E-Fields.png", "Unit 2 Photos/Electric-Fields.png", "Unit 2 Photos/Fundamental-Particles-Poster.png", "Unit 2 Photos/Interacting-Particles-Poster.png", "Unit 2 Photos/Irradiance-Poster.png", "Unit 2 Photos/Magnetic-fields-poster-(updated).png", "Unit 2 Photos/Nuclear-Physics-Poster.png", "Unit 2 Photos/Orders-of-magnitude-physics-poster.png", "Unit 2 Photos/Particle-accelerator-poster.png", "Unit 2 Photos/Refractive-Index-Poster.png", "Unit 2 Photos/Wave-Particle-Duality-Poster.png", "Unit 2 Photos/Spectra-Physics-Poster.png", "Unit 2 Photos/Total-Internal-Reflection-Poster.png", "Unit 2 Photos/Uncertainties-Physics-Poster.png", "Unit 2 Photos/Waves-&-Interference.png", "Unit 2 Photos/Work-function-Poster.png", "Unit 2 Photos/Youngs'-double-slit-experiment.png"]
+            ["Unit 2 Photos/Charges-in-E-Fields.png", "Unit 2 Photos/Electric-Fields.png", "Unit 2 Photos/Fundamental-Particles-Poster.png", "Unit 2 Photos/Interacting-Particles-Poster.png", "Unit 2 Photos/Irradiance-Poster.png", "Unit 2 Photos/Magnetic-fields-poster-(updated).png", "Unit 2 Photos/Nuclear-Physics-Poster.png", "Unit 2 Photos/Orders-of-magnitude-physics-poster.png", "Unit 2 Photos/Particle-accelerator-poster.png", "Unit 2 Photos/Refractive-Index-Poster.png", "Unit 2 Photos/Wave-Particle-Duality-Poster.png", "Unit 2 Photos/Spectra-Physics-Poster.png", "Unit 2 Photos/Total-Internal-Reflection-Poster.png", "Unit 2 Photos/Uncertainties-Physics-Poster.png", "Unit 2 Photos/Waves-&-Interference.png", "Unit 2 Photos/Work-function-Poster.png", "Unit 2 Photos/Youngs'-double-slit-experiment.png"],
+            ["Unit 3 Photos/Current-and-Voltage.png", "Unit 3 Photos/Internal-Resistance.png", "Unit 3 Photos/Capacitors.png", "Unit 3 Photos/Capacitor-Graphs.png", "Unit 3 Photos/Semiconductors.png", "Unit 3 Photos/LEDs-and-Photodiodes.png"]
             ]
 
             document.getElementById("modal").style.display = "flex";
@@ -191,7 +192,7 @@
                     return
                 }
             }
-            for (let i = 0; i <= 16; i++){
+            for (let i = 0; i <= 6; i++){
                 if (imageId == `img${i}` && document.querySelector("#ElectroNav").classList.contains("underline")){
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     document.getElementById("modalImage").src = photoSrcArray[2][i];
@@ -276,8 +277,24 @@
             }
             else if (localStorage.getItem("storedVar") == "Electro"){
                 document.querySelector("#ElectroNav").classList.add("underline");
-                document.querySelector("#notNav").classList.add("hidden");
-                document.querySelector("#comingSoon").classList.remove("hidden")
+
+
+                document.querySelector("#img1").src = "Unit 3 Photos/Current-and-Voltage.png";
+                document.querySelector("#info1").innerHTML = "AC, DC current and Peak, R.M.S Voltage";
+                document.querySelector("#img2").src = "Unit 3 Photos/Internal-Resistance.png";
+                document.querySelector("#info2").innerHTML = "Internal Resistance, EMF, Lost Volts and TPD";
+                document.querySelector("#img3").src = "Unit 3 Photos/Capacitors.png";
+                document.querySelector("#info3").innerHTML = "Capacitors, Capacitance and Energy";
+                document.querySelector("#img4").src = "Unit 3 Photos/Capacitor-Graphs.png";
+                document.querySelector("#info4").innerHTML = "Charging and Discharging Capacitor Graphs - Voltage and Current";
+                document.querySelector("#img5").src = "Unit 3 Photos/Semiconductors.png";
+                document.querySelector("#info5").innerHTML = "Semiconductors, Band Structure, N and P type and n-p Junction";
+                document.querySelector("#img6").src = "Unit 3 Photos/LEDs-and-Photodiodes.png";
+                document.querySelector("#info6").innerHTML = "LEDs,Photodiodes and Photovoltaic Mode ";
+                for (let i = 7; i <= 8; i++){
+                    console.log(`img${i}`)
+                    document.querySelector(`#item${i}`).classList.add("hidden");
+                }
             }
 
         }
@@ -306,8 +323,10 @@
                 document.querySelector("#info7").innerHTML = "Doppler Effect, Dark Matter and Energy, Blackbody Radiation, Redshift and Hubble's Law"
                 document.querySelector("#info8").innerHTML = "The Big Bang Theory - Large Scale Homogeneity, Abundance of Light Elements and CMB"
                 window.scrollTo({ top: 0});
+                for (let i = 7; i <= 8; i++){
+                    document.querySelector(`#item${i}`).classList.remove("hidden");
+                }
                 for (let i = 9; i <= 17; i++){
-                    console.log(`img${i}`)
                     document.querySelector(`#item${i}`).classList.add("hidden");
                 }
             }
@@ -355,7 +374,6 @@
 
                 window.scrollTo({ top: 0});
                 for (let i = 9; i <= 17; i++){
-                    console.log(`img${i}`)
                     document.querySelector(`#item${i}`).classList.remove("hidden");
                 }
             }
@@ -363,9 +381,22 @@
                 document.querySelector("#ElectroNav").classList.add("underline");
                 document.querySelector("#GravitationNav").classList.remove("underline");
                 document.querySelector("#ParticlesNav").classList.remove("underline");
-                document.querySelector("#notNav").classList.add("hidden");
+                document.querySelector("#img1").src = "Unit 3 Photos/Current-and-Voltage.png";
+                document.querySelector("#info1").innerHTML = "AC, DC current and Peak, R.M.S Voltage";
+                document.querySelector("#img2").src = "Unit 3 Photos/Internal-Resistance.png";
+                document.querySelector("#info2").innerHTML = "Internal Resistance, EMF, Lost Volts and TPD";
+                document.querySelector("#img3").src = "Unit 3 Photos/Capacitors.png";
+                document.querySelector("#info3").innerHTML = "Capacitors, Capacitance and Energy";
+                document.querySelector("#img4").src = "Unit 3 Photos/Capacitor-Graphs.png";
+                document.querySelector("#info4").innerHTML = "Charging and Discharging Capacitor Graphs - Voltage and Current";
+                document.querySelector("#img5").src = "Unit 3 Photos/Semiconductors.png";
+                document.querySelector("#info5").innerHTML = "Semiconductors, Band Structure, N and P type and n-p Junction";
+                document.querySelector("#img6").src = "Unit 3 Photos/LEDs-and-Photodiodes.png";
+                document.querySelector("#info6").innerHTML = "LEDs,Photodiodes and Photovoltaic Mode ";
+                for (let i = 7; i <= 17; i++){
+                    document.querySelector(`#item${i}`).classList.add("hidden");
+                }
                 window.scrollTo({ top: 0});
-                document.querySelector("#comingSoon").classList.remove("hidden")
             }
         }
 
@@ -487,9 +518,6 @@
     <div id="div1" style="display: none;"></div>
     <div id="div2" style="display: none;"></div>
     <div id="div3" style="display: none;"></div>
-    <div id="comingSoonWrapper">
-        <h1 id="comingSoon" class="hidden">Coming Soon</h1>
-    </div>
 </body>
 <script src="./main.js"></script>
 </html>
