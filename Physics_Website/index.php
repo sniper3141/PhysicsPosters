@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="indexMediaQuery.css">
     
     <link rel="import" href="Unit1.php">
-    <title>Document</title>
+    <title>Physics Posters</title>
     <style>
         #div1{
             width: 33.333%;

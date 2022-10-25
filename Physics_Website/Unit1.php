@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./SubPage.js" type="module"></script>
     <link rel="stylesheet" href="Unit1MediaQuery.css">
-    <title>Document</title>
+    <title>Physics Posters</title>
     <style>
         img{
            max-width: 25rem;
