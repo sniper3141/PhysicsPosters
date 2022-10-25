@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexMediaQuery.css">
     
     <link rel="import" href="Unit1.php">
     <title>Document</title>
@@ -102,7 +103,7 @@
         h1{
             z-index: 1;
             color: white;
-            font-size: 39px;
+            font-size: 2.438rem;
             font-family: Arial, Helvetica, sans-serif;
             padding: 10px;
             background-color: rgba(16, 15, 15, 0);

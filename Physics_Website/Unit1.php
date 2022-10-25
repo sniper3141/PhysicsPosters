@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./SubPage.js" type="module"></script>
-    
+    <link rel="stylesheet" href="Unit1MediaQuery.css">
     <title>Document</title>
     <style>
         img{
@@ -271,7 +271,6 @@
                 document.querySelector("#img17").src = "Unit 2 Photos/Youngs'-double-slit-experiment.png";
                 document.querySelector("#info17").innerHTML = "Young's Double Slit Experiment and Path Difference";
                 for (let i = 9; i <= 17; i++){
-                    console.log(`img${i}`)
                     document.querySelector(`#item${i}`).classList.remove("hidden");
                 }
             }
@@ -292,7 +291,6 @@
                 document.querySelector("#img6").src = "Unit 3 Photos/LEDs-and-Photodiodes.png";
                 document.querySelector("#info6").innerHTML = "LEDs,Photodiodes and Photovoltaic Mode ";
                 for (let i = 7; i <= 8; i++){
-                    console.log(`img${i}`)
                     document.querySelector(`#item${i}`).classList.add("hidden");
                 }
             }
@@ -400,16 +398,47 @@
             }
         }
 
+        function changeLeft(){
+            if (document.querySelector("#GravitationNav").classList.contains("underline")){
+                changePage("#ElectroNav");
+                return
+            }
+            else if (document.querySelector("#ParticlesNav").classList.contains("underline")){
+                changePage("#GravitationNav");
+                return
+            }
+            if (document.querySelector("#ElectroNav").classList.contains("underline")){
+                changePage("#ParticlesNav");
+                return
+            }
+        }
+
+        function changeRight(){
+            if (document.querySelector("#GravitationNav").classList.contains("underline")){
+                changePage("#ParticlesNav");
+                return
+            }
+            else if (document.querySelector("#ParticlesNav").classList.contains("underline")){
+                changePage("#ElectroNav");
+                return
+            }
+            if (document.querySelector("#ElectroNav").classList.contains("underline")){
+                changePage("#GravitationNav");
+                return
+            }
+        }
         
     </script>
-    
+
 </head>
 <body onload="PageLoad()">
     <!-- <main id="blur" onclick="closeModal()"> -->
         <ul id="navWrapper">
+            <img src="arrow.png" class="hidden arrow" id="arrow1" onclick="changeLeft()">
             <li class="navBar" id="GravitationNav" onclick="changePage('#GravitationNav')">Unit 1 - Gravitation and motion</li>
             <li class="navBar" id="ParticlesNav" onclick="changePage('#ParticlesNav')">Unit 2 - Particles and Waves</li>
             <li class="navBar" id="ElectroNav" onclick="changePage('#ElectroNav')">Unit 3 - Electromagnetism</li>
+            <img src="arrow.png" class="hidden arrow" onclick="changeRight()">
         </ul>
         <main id="notNav">
         <ul id="imageList">
